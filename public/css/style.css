@@ -1,0 +1,844 @@
+/*
+Theme Name: JetWash
+Theme URI: https://templatesjungle.com/
+Author: TemplatesJungle
+Author URI: https://templatesjungle.com/
+Description: JetWash is specially designed product packaged for Pressure Washing Company by TemplatesJungle.
+Version: 1.1
+*/
+
+/*--------------------------------------------------------------
+This is main CSS file that contains custom style rules used in this template
+--------------------------------------------------------------*/
+
+/*------------------------------------*\
+    Table of contents
+\*------------------------------------*/
+
+/*------------------------------------------------
+
+CSS STRUCTURE:
+
+1. VARIABLES
+
+2. GENERAL TYPOGRAPHY
+  2.1 General Styles
+  2.2 Background Color
+  2.3 Section
+    - Section Paddings
+    - Section Margins
+    - Section Title
+    - Content width
+  2.4 Buttons
+    - Primary Buttons
+    - Outline Buttons
+
+3. CONTENT ELEMENTS
+  - Dropdown
+  - Form
+  - Svg Color
+- Swiper
+- Modal
+
+4. SITE STRUCTURE
+  4.1 Header
+  4.2 Slider Section
+  4.3 About Section
+  4.4 Services Section
+  4.5 Projects Section
+
+5. PAGES STYLE
+  5.1 About page
+  5.2 Blog page 
+  5.3 Pricing page 
+  5.4 reviews page
+  5.5 faqs page 
+
+  
+/*--------------------------------------------------------------
+/** 1. VARIABLES
+--------------------------------------------------------------*/
+:root {
+  --primary-color: #0aa1d6;
+  --secondary-color: #0b306e;
+  --black-color: #1a2a36;
+  --light-black-color: #4e4c49;
+  --dark-color: #9b9b9b;
+  --primary-color-200: #e8f0f1;
+  --primary-color-400: #c4e9ed;
+  --gray-color: #777f81;
+  --bs-dark-rgb: 80, 80, 80;
+  --bs-gray-100: #eae5dd;
+  --bs-gray-300: #dcdcdc;
+  --bs-primary-text-emphasis: var(--primary-color);
+  --bs-light-rgb: rgba(255, 255, 255, 1);
+  --bs-primary-rgb: 10, 161, 214;
+  --bs-secondary-rgb: 11, 48, 110;
+  --light-color: #fdfdfd;
+  --swiper-theme-color: #111 !important;
+  --cadet-blue-color: #9ab4b7;
+}
+
+/* Fonts */
+:root {
+  --heading-font: "Montserrat", sans-serif;
+  --body-font: "Hind", sans-serif;
+}
+
+/*----------------------------------------------*/
+/* 2 GENERAL TYPOGRAPHY
+/*----------------------------------------------*/
+
+/* 2.1 General Styles
+/*----------------------------------------------*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 164%;
+  letter-spacing: 0.32px;
+  color: var(--dark-color);
+  margin: 0;
+  background: linear-gradient(123deg, #71b8e7, #9b59b6);
+}
+
+p {
+  color: var(--dark-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+.text-light {
+  color: var(--light-color) !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-black {
+  color: var(--black-color) !important;
+}
+
+/* 2.2 Background Color
+/*----------------------------------------------*/
+.bg-light {
+  background-color: var(--light-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-gray {
+  background-color: var(--bs-gray-100) !important;
+}
+
+.bg-accent-gradient {
+  background: linear-gradient(90deg, #18a7e4 0%, #1badec 0.01%, #0a9cdb 100%);
+}
+
+.bg-primary-200 {
+  background-color: var(--primary-color-200) !important;
+}
+
+.bg-primary-dim {
+  background-color: var(--bs-primary-rgb) !important;
+}
+
+/*--------------------------------------------------------------
+/** 2.3 Section
+--------------------------------------------------------------*/
+/* - Section Padding
+--------------------------------------------------------------*/
+.padding-small {
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+
+.padding-medium {
+  padding-top: 10em;
+  padding-bottom: 10em;
+}
+
+.padding-large {
+  padding-top: 12em;
+  padding-bottom: 12em;
+}
+
+@media only screen and (max-width: 700px) {
+  .padding-medium {
+    padding-top: 8em;
+    padding-bottom: 8em;
+  }
+
+  .padding-small {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+}
+
+/* - Section Margin
+--------------------------------------------------------------*/
+.margin-small {
+  margin-top: 8.125em;
+  margin-bottom: 8.125em;
+}
+
+.margin-medium {
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+
+.margin-large {
+  margin-top: 12em;
+  margin-bottom: 12em;
+}
+
+/* - Section Title
+--------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--black-color);
+  font-family: var(--heading-font);
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 0.84px;
+  line-height: 115%;
+}
+
+h6 {
+  color: var(--light-black-color);
+  font-family: var(--body-font);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* - Content width
+--------------------------------------------------------------*/
+.container-md {
+  max-width: 1465px;
+}
+
+.container-lg {
+  max-width: 1750px;
+}
+
+/* Animation */
+@media (min-width: 200px) {
+  .animate {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+/* Animate Slide */
+@keyframes slide {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
+
+.slide {
+  -webkit-animation-name: slide;
+  animation-name: slide;
+}
+
+/*--------------------------------------------------------------
+/** 2.4 Buttons
+--------------------------------------------------------------*/
+.btn {
+  --bs-btn-padding-x: 2.2rem;
+  --bs-btn-padding-y: 0.8rem;
+  --bs-btn-font-size: 1rem;
+  --bs-btn-font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 0px;
+  letter-spacing: 0.1rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--primary-color);
+  --bs-btn-border-color: var(--primary-color);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--secondary-color);
+  --bs-btn-hover-border-color: var(--secondary-color);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--secondary-color);
+  --bs-btn-active-border-color: var(--secondary-color);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--secondary-color);
+  --bs-btn-disabled-border-color: var(--secondary-color);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--primary-color);
+  --bs-btn-border-color: var(--primary-color);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--primary-color);
+  --bs-btn-hover-border-color: var(--primary-color);
+  --bs-btn-focus-shadow-rgb: 13, 110, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--primary-color);
+  --bs-btn-active-border-color: var(--primary-color);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--primary-color);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--primary-color);
+  --bs-gradient: none;
+}
+
+/*--------------------------------------------------------------
+/** 3.CONTENT ELEMENTS
+--------------------------------------------------------------*/
+
+/* Dropdown
+------------------------------------------------------------- */
+.dropdown-item {
+  color: var(--dark-color);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  text-decoration: none;
+  color: var(--light-color);
+  background-color: var(--primary-color);
+}
+
+/* Form
+------------------------------------------------------------- */
+.form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: none;
+}
+
+.form-check-input:focus {
+  border-color: var(--primary-color);
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--dark-color);
+  outline: 0;
+  box-shadow: none;
+}
+
+input,
+select,
+textarea {
+  border-color: var(--dark-color);
+  outline: 0;
+  box-shadow: none;
+}
+
+select:focus {
+  box-shadow: none;
+}
+
+/* Svg Color
+------------------------------------------------------------- */
+svg.light-color {
+  color: var(--light-color);
+}
+
+svg.dark-color {
+  color: var(--dark-color);
+}
+
+svg.primary-color {
+  color: var(--primary-color);
+}
+
+svg.primary-color {
+  color: var(--primary-color);
+}
+
+svg.primary-color-500 {
+  color: var(--bs-primary-rgb);
+}
+
+svg.social {
+  color: var(--light-color);
+}
+
+svg.social:hover {
+  color: var(--primary-color);
+}
+
+/* Swiper
+------------------------------------------------------------- */
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 8px;
+}
+
+.slider-pagination .swiper-pagination-bullet {
+  width: 50px;
+  height: 3px;
+  border-radius: 0;
+  background: #ffffff;
+}
+
+.slider-pagination .swiper-pagination-bullet-active {
+  background: var(--primary-color);
+}
+
+.testimonial-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+}
+
+.testimonial-pagination .swiper-pagination-bullet-active {
+  background: var(--primary-color);
+}
+
+/* modal video override
+------------------------------------------------------------- */
+.modal-dialog {
+  max-width: 800px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.modal-content {
+  padding: 0;
+  background-color: #f5f3ef;
+  border: none;
+  border-radius: 0;
+}
+
+/*----------------------------------------------*/
+/* 4 SITE STRUCTURE */
+/*----------------------------------------------*/
+
+/* 4.1 Header
+/*----------------------------------------------*/
+
+a.nav-link {
+  text-transform: uppercase;
+  color: var(--light-black-color);
+}
+
+a.nav-link:focus {
+  color: var(--light-black-color);
+}
+
+a.nav-link.active,
+a.nav-link:hover {
+  color: var(--primary-color) !important;
+  outline: none;
+}
+
+#primary-header .dropdown .search::after {
+  content: none;
+}
+
+#primary-header .search-dropdown .dropdown-menu {
+  width: 260px;
+}
+
+#primary-header .search-dropdown .dropdown-menu input {
+  min-width: 100%;
+}
+
+#primary-header .search-dropdown .dropdown-menu button {
+  padding: 0 12px;
+  min-height: -webkit-fill-available;
+  border-radius: 0.25rem;
+}
+
+@media (max-width: 999px) {
+  a.nav-link {
+    font-size: 30px;
+    padding: 15px 0 15px 0 !important;
+  }
+}
+
+/* 4.2 Slider Section
+/*----------------------------------------------*/
+section#slider .banner-content {
+  width: 40%;
+  background: rgba(253, 253, 253, 0.9);
+}
+
+section#slider .main-slider-button-next,
+.main-slider-button-prev {
+  z-index: 111111;
+  height: fit-content;
+  opacity: 0.9;
+}
+
+section#slider .main-slider-button-next.swiper-button-disabled,
+.main-slider-button-prev.swiper-button-disabled {
+  opacity: 0.6;
+}
+
+@media only screen and (max-width: 999px) {
+  section#slider .banner-content {
+    width: 66%;
+  }
+}
+
+/* 4.3 About Section
+/*----------------------------------------------*/
+svg.play-icon {
+  animation: play 3s alternate infinite ease-in;
+}
+
+@keyframes play {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 4.4 Services Section
+/*----------------------------------------------*/
+.service-post img.service-img {
+  transition: all 0.5s ease-in-out;
+}
+
+.service-post:hover img.service-img {
+  opacity: 0.5;
+}
+
+/* 4.5 Projects Section
+/*----------------------------------------------*/
+
+button.filter-button {
+  border: 0;
+  background: transparent;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+button.filter-button.active,
+button.filter-button:hover {
+  color: var(--bs-light);
+  background: var(--primary-color);
+}
+
+/*----------------------------------------------*/
+/* 5 PAGES STYLE */
+/*----------------------------------------------*/
+
+/*--------------------------------------------------------------
+5.1 About page 
+--------------------------------------------------------------*/
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--bs-light);
+}
+
+/*--------------------------------------------------------------
+  5.2 Blog page 
+  --------------------------------------------------------------*/
+.pagination {
+  --bs-pagination-color: var(--black-color);
+  --bs-pagination-hover-color: #fff;
+  --bs-pagination-hover-bg: var(--primary-color);
+  --bs-pagination-hover-border-color: var(--primary-color);
+  --bs-pagination-focus-color: #fff;
+  --bs-pagination-focus-bg: var(--primary-color);
+  --bs-pagination-focus-box-shadow: none;
+  --bs-pagination-active-bg: var(--primary-color);
+  --bs-pagination-active-border-color: var(--primary-color);
+}
+
+/*--------------------------------------------------------------
+ 5.3 Pricing page 
+  --------------------------------------------------------------*/
+.plan-post {
+  border: 1px solid var(--primary-color);
+}
+
+span.price-tick {
+  color: var(--primary-color);
+}
+
+.price-option {
+  height: 320px;
+}
+
+/*--------------------------------------------------------------
+ 5.4 reviews page
+--------------------------------------------------------------*/
+
+.reviews-components {
+  box-shadow: 0px 12px 90px rgba(12, 12, 12, 0.06);
+}
+
+iconify-icon.quote {
+  font-size: 60px;
+  color: var(--primary-color);
+}
+
+.rate {
+  color: var(--primary-color);
+}
+
+/*--------------------------------------------------------------
+5.5 faqs page 
+--------------------------------------------------------------*/
+
+/* accordian style override  */
+
+.accordion {
+  --bs-accordion-border-color: var(--primary-color);
+  --bs-accordion-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    border-radius 0.15s ease;
+  --bs-accordion-btn-icon: url("https://api.iconify.design/ion/caret-down.svg?color=%230AA1D6&width=30");
+  --bs-accordion-btn-active-icon: url("https://api.iconify.design/ion/caret-down.svg?color=%230AA1D6&width=30");
+  --bs-accordion-border-radius: 0px;
+}
+
+.accordion-header {
+  margin-bottom: 0;
+  border-top: 1px solid var(--primary-color);
+}
+
+.accordion-button {
+  font-family: var(--heading-font);
+  font-weight: var(--heading-font-weight);
+  color: var(--heading-color);
+  line-height: var(--heading-line-height);
+  letter-spacing: 0.065rem;
+  text-transform: uppercase;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--heading-color);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* registratin page css */
+
+.reg_container {
+  max-width: 700px;
+  width: 100%;
+  margin: 11.1rem auto;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+
+.reg_container .reg_title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.reg_container .reg_title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background: linear-gradient(123deg, #71b8e7, #9b59b6);
+}
+
+form .log_reg_user_details .reg_input_box {
+  margin-bottom: 15px;
+  margin: 20px 0 12px 0;
+  width: 100%
+}
+.reg_container form .reg_user_details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .reg_user_details .reg_input_box {
+  margin-bottom: 15px;
+  margin: 20px 0 12px 0;
+  width: calc(100% / 2 - 20px);
+}
+
+.reg_user_details .reg_input_box .reg_details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.reg_user_details .reg_input_box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.log_reg_user_details .reg_input_box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.reg_user_details .reg_input_box input:focus,
+.reg_user_details .reg_input_box input:valid {
+  border-color: #9b59b6;
+}
+
+form .reg_gender_details .reg_gender_title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+form .reg_gender_details .reg_category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  gap: 3rem;
+}
+
+.reg_gender_details .reg_category label {
+  display: flex;
+  align-items: center;
+}
+
+.reg_gender_details .reg_category .reg_dot {
+  height: 18px;
+  width: 18px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 5px solid transparent;
+}
+
+#reg_dot-1:checked ~ .reg_category label .one,
+#reg_dot-2:checked ~ .reg_category label .two,
+#reg_dot-3:checked ~ .reg_category label .three {
+  border-color: #d9d9d9;
+  background-color: #9b59b6;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+form .reg_button {
+  height: 45px;
+  margin: 45px 0;
+}
+
+form .reg_button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: linear-gradient(123deg, #71b8e7, #9b59b6);
+  cursor: pointer;
+}
+
+form .reg_button input:hover {
+  background: linear-gradient(-123deg, #71b8e7, #9b59b6);
+}
+
+@media (max-width: 584px) {
+  .reg_container {
+    max-width: 100%;
+  }
+  form .reg_user_details .reg_input_box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .reg_gender_details .reg_category {
+    width: 100%;
+  }
+  .reg_container form .reg_user_details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .reg_user_details::-webkit-scrollbar {
+    width: 0;
+  }
+}
