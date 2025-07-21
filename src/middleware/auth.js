@@ -8,6 +8,7 @@ const auth = async (req, res, next) => {
     console.log(verifyUser);
 
     const user = await Register.findOne({_id:verifyUser._id})
+    // const user = await Register.findOne({_id:verifyUser._id})
     console.log(user);
     next();
   } catch (error) {
