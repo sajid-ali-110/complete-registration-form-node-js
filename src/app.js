@@ -59,7 +59,7 @@ app.get("/logout", auth, async (req, res) => {
     });
 
     console.log("logout successfully");
-    await req.user.save();  // make sure this is the same object you modified above
+    await req.user.save();
 
     res.render("login");
   } catch (error) {
