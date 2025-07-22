@@ -140,8 +140,6 @@ app.post("/login", async (req, res) => {
 
 // hashing password
 
-// const saltRounds = 10;
-
 // Start Server
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
