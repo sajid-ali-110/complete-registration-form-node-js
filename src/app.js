@@ -6,8 +6,8 @@ const bcrypt = require("bcrypt");
 const cookie = require("cookie");
 const cookieParser = require("cookie-parser");
 const port = process.env.PORT || 3000;
-const jwt = require("jsonwebtoken")
-const auth = require("./middleware/auth")
+const jwt = require("jsonwebtoken");
+const auth = require("./middleware/auth");
 
 // DB Connection
 require("./db/conn");
@@ -42,6 +42,31 @@ app.get("/login", (req, res) => {
 app.get("/register", (req, res) => {
   res.render("register");
 });
+app.get("/logout", auth, async (req, res) => {
+  try {
+
+    // logout from one device
+    // req.user.tokens = req.user.tokens.filter((currElement) => {
+    //   return currElement.token !== req.token;
+    // });
+
+    // logout from all devices
+    req.user.tokens=[]
+
+    res.clearCookie("jwt", {
+      httpOnly: true,
+      path: "/",
+    });
+
+    console.log("logout successfully");
+    await req.user.save();  // make sure this is the same object you modified above
+
+    res.render("login");
+  } catch (error) {
+    res.status(501).send(error);
+  }
+});
+
 app.get("/secret", auth, (req, res) => {
   // console.log(`this is  awesome  ${req.cookies.jwt}`);
   res.render("secret");
