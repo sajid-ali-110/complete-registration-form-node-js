@@ -68,7 +68,6 @@ app.get("/logout", auth, async (req, res) => {
 });
 
 app.get("/secret", auth, (req, res) => {
-  // console.log(`this is  awesome  ${req.cookies.jwt}`);
   res.render("secret");
 });
 
