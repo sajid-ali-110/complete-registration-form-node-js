@@ -78,7 +78,7 @@ app.post("/register", async (req, res) => {
 
     if (password === cpassword) {
       const registeredEmployee = new Register({
-        firstName: req.body.firstname, // match form field name
+        firstName: req.body.firstname,
         lastName: req.body.lastname,
         email: req.body.email,
         gender: req.body.gender,
